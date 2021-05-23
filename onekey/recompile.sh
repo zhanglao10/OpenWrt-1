@@ -5,7 +5,7 @@ echo "本脚本仅适用于在Ubuntu环境下编译 https://github.com/garypang1
 echo
 echo
 
-if [ "$USER" == "root" ]; then
+if [ "$USER" == "admin" ]; then
 	echo
 	echo
 	echo "请勿使用root用户编译，换一个普通用户吧~~"
@@ -50,8 +50,8 @@ fi
 
 echo
 
-read -p "请输入后台地址 [回车默认10.0.0.1]: " ip
-ip=${ip:-"10.0.0.1"}
+read -p "请输入后台地址 [回车默认192.168.1.1]: " ip
+ip=${ip:-"192.168.1.1"}
 echo "您的后台地址为: $ip"
 
 rm -Rf feeds package/feeds common files diy tmp
@@ -124,6 +124,6 @@ echo "
 编译完成~~~
 
 初始后台地址: $ip
-初始用户名密码: root  root
+初始用户名密码: admin  password
 
 "
